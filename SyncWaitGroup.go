@@ -13,7 +13,7 @@ import "sync"
 //  syncWaitGroup.Wait()
 type SyncWaitGroup struct {
 	sync.WaitGroup
-	mutex sync.Mutex
+	Mutex sync.Mutex
 }
 
 // AddRunnable adds a synchronous function to the SyncWaitGroup, executes it as an async goroutine
