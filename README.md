@@ -19,7 +19,7 @@ For convenience SyncWaitGroup provides a default mutex.
     syncWaitGroup.AddFunction(myFunc)
     syncWaitGroup.Wait()
 
-### advances usage example
+### advanced usage example
     func myFunc() {
         // do something synchronously...
     }
