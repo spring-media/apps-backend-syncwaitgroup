@@ -12,7 +12,7 @@ For convenience SyncWaitGroup provides a default mutex.
 
 ### Simple usage example
     func myFunc() {
-        //... do something synchronously
+        // do something synchronously...
     }
 
     var syncWaitGroup = SyncWaitGroup{}
@@ -27,7 +27,7 @@ For convenience SyncWaitGroup provides a default mutex.
     type myRunnable struct {}
 
     func (runner *myRunnable) Run(syncWaitGroup *SyncWaitGroup) {
-	    // do something syncronously...
+	// do something syncronously...
         ...
 
         // dynamically add more sync code to be executed as Goroutine within this managed Runnable
