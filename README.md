@@ -35,3 +35,7 @@ For convenience SyncWaitGroup provides a default mutex.
         // dynamically add more sync code to be executed as Goroutine within this managed Runnable
         syncWaitGroup.AddFunction(myFunc)
     }
+    
+    var syncWaitGroup = SyncWaitGroup{}
+    syncWaitGroup.AddRunnable(myRunnable{})
+    syncWaitGroup.Wait()
