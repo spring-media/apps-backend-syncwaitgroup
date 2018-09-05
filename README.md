@@ -8,8 +8,28 @@ Go written wrapper for sync.WaitGroup to ease the usage of Goroutines.
 The main purpose of SyncWaitGroup is to execute and manage the synchronous functions provided as async goroutines; additionally it allows to dynamically add more functions - even by the function currently managed.
 For convenience SyncWaitGroup provides a default mutex.  
 
-## usage example
+## usage examples
+
+### simple usage example
+    func myFunc() {
+        //... do something synchronously
+    }
 
     var syncWaitGroup = SyncWaitGroup{}
-    syncWaitGroup.AddFunction(...) or syncWaitGroup.AddRunnable(...)
+    syncWaitGroup.AddFunction(myFunc)
     syncWaitGroup.Wait()
+
+### advances usage example
+    func myFunc() {
+        // do something synchronously...
+    }
+
+    type myRunnable struct {}
+
+    func (runner *myRunnable) Run(syncWaitGroup *SyncWaitGroup) {
+	    // do something syncronously...
+        ...
+
+        // dynamically add more sync code to be executed as Goroutine within this managed Runnable
+        syncWaitGroup.AddFunction(myFunc)
+    }
