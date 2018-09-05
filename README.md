@@ -27,8 +27,10 @@ For convenience SyncWaitGroup provides a default mutex.
     type myRunnable struct {}
 
     func (runner *myRunnable) Run(syncWaitGroup *SyncWaitGroup) {
-    	// do something syncronously...
+    	// do something synchronously, maybe synchronized via the Mutex provided...
+        syncWaitGroup.Mutex.Lock()
         ...
+        syncWaitGroup.Mutex.Unlock()
 
         // dynamically add more sync code to be executed as Goroutine within this managed Runnable
         syncWaitGroup.AddFunction(myFunc)
