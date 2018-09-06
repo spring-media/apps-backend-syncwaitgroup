@@ -1,7 +1,7 @@
-
+# apps-backend-syncwaitgroup
+[![Platform](https://img.shields.io/badge/platform-golang-blue.svg)](https://golang.org/)
 [![Build Status](https://travis-ci.com/spring-media/apps-backend-syncwaitgroup.svg?token=yZWuL9Kotp6i5ACnmzh6&branch=master)](https://travis-ci.com/spring-media/apps-backend-syncwaitgroup)
 
-# apps-backend-syncwaitgroup
 Go written wrapper for sync.WaitGroup to ease the usage of Goroutines.
 
 ## Summary
